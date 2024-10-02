@@ -1,0 +1,7 @@
+{
+    "deleteModal": {
+        "header": "Delete",
+        "ask": "Are you sure you want to delete «%s»?"
+    },
+    "empty": "The latest scans will be displayed here"
+}

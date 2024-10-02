@@ -1,0 +1,78 @@
+#NotificationsListContainer {
+    background-color: transparent;
+    border-left: 1px solid #1E1F22;
+    border-top: 1px solid #1E1F22;
+}
+
+#NotificationsListTittle {
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#NotificationsListClearAllButton {
+    background-color: transparent;
+    border: none;
+    color: #6B9BFA;
+    font-size: 11px;
+    padding-top: 2px;
+}
+
+#NotificationsListClearAllButton:hover {
+    text-decoration: underline;
+}
+
+#NotificationsListScrollArea {
+    background-color: transparent;
+    border: none;
+}
+
+#NotificationsList {
+    background-color: transparent;
+    border: none;
+}
+
+#NotificationItem {
+    background-color: #393B40;
+    border-radius: 10px;
+}
+
+#NotificationItemSign {
+    border: none;
+}
+
+#NotificationItemTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+#NotificationItemCloseButton {
+    border: none;
+    border-radius: 8px;
+    padding-bottom: 3px;
+}
+
+#NotificationItemCloseButton:hover {
+    background-color: #ED5157;
+}
+
+#NotificationItemTextBrowser {
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    border: none;
+}
+
+#NotificationItemTime {
+    font-size: 11px;
+    color: #A8A8A8;
+    padding-right: 10px;
+}
+
+#NotificationItemTime QToolTip {
+    border: 1px solid #A8A8A8;
+    border-radius: none;
+}
+

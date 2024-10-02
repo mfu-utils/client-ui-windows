@@ -1,0 +1,19 @@
+#ControlLineEdit {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #43454A;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#ControlLineEdit:disabled {
+    color: #43454A;
+}
+
+#ControlLineEdit[danger="true"] {
+     border-color: #ED5157;
+}
+
+#ControlLineEdit[primary="true"] {
+     border-color: #3574F0;
+}

@@ -1,0 +1,160 @@
+commands:
+    ping:
+        return: map
+
+    print:
+        return: list
+        parameters:
+            device:
+                type: str
+                required: true
+
+            copies:
+                type: int
+
+            ##################################################################
+            # Paper size                                                     #
+            # See https://www.cups.org/doc/options.html                      #
+            #                                                                #
+            # Letter - US Letter (8.5x11 inches, or 216x279mm)               #
+            # Legal  - US Legal (8.5x14 inches, or 216x356mm)                #
+            # A4     - ISO A4 (8.27x11.69 inches, or 210x297mm)              #
+            # COM10  - US #10 Envelope (9.5x4.125 inches, or 241x105mm)      #
+            # DL     - ISO DL Envelope (8.66x4.33 inches, or 220x110mm)      #
+            ##################################################################
+            paper-size:
+                type: str
+                default: A4
+                variants:
+                    - Letter
+                    - Legal
+                    - A4
+                    - COM10
+                    - DL
+
+            ##################################################################
+            # Paper tray                                                     #
+            # See https://www.cups.org/doc/options.html                      #
+            #                                                                #
+            # Upper         - Upper paper tray                               #
+            # Lower         - Lower paper tray                               #
+            # MultiPurpose  - Multi-purpose paper tray                       #
+            # LargeCapacity - Large capacity paper tray                      #
+            ##################################################################
+            paper-tray:
+                type: str
+                variants:
+                    - Upper
+                    - Lower
+                    - MultiPurpose
+                    - LargeCapacity
+
+            pages:
+                type: int
+                number: "*"
+
+            #####################################################################################
+            # Banner                                                                            #
+            # See https://www.cups.org/doc/options.html                                         #
+            #                                                                                   #
+            # classified   - A banner page with a "classified" label at the top and bottom.     #
+            # confidential - A banner page with a "confidential" label at the top and bottom.   #
+            # secret       - A banner page with a "secret" label at the top and bottom.         #
+            # standard     - A banner page with no label at the top and bottom.                 #
+            # topsecret    - A banner page with a "top secret" label at the top and bottom.     #
+            # unclassified - A banner page with an "unclassified" label at the top and bottom.  #
+            #####################################################################################
+            banner:
+                type: str
+                variants:
+                    - Classified
+                    - Confidential
+                    - Secret
+                    - Standard
+                    - Topsecret
+                    - Unclassified
+
+            order:
+                type: str
+                default: Normal
+                variants:
+                    - Normal
+                    - Reverse
+
+            mirror:
+                type: bool
+
+            landscape:
+                type: bool
+
+            transparency:
+                type: bool
+
+            file:
+                type: bytes
+                required: true
+
+            mime-type:
+                type: str
+                required: true
+                variants:
+                    - MSWORD
+                    - PDF
+                    - TIFF
+                    - PNG
+                    - JPEG
+
+    scan:
+        subcommands:
+            devices: # Get connected to server devices list
+                return: list
+                parameters:
+                    update: # Server scan devices and set data to cache. This option ask server 'fresh' data about devices.
+                        type: bool
+
+            queue:
+                return: list
+
+        return: bytes
+        parameters:
+            media:
+                type: str
+                default: A4
+                variants:
+                    - Letter
+                    - Legal
+                    - A4
+                    - COM10
+                    - DL
+
+            format:
+                type: str
+                default: tiff
+                variants:
+                    - tiff
+                    - jpeg
+                    - png
+
+            mode:
+                type: str
+                variants:
+                    - Lineart
+                    - Gray
+                    - Color
+
+            device:
+                type: str
+
+    printers:
+        subcommands:
+            # Return pre cached devices. If cache disabled, return new list
+            list:
+                return: list
+                parameters:
+                    # Update cache if cache enabled
+                    update-cache:
+                        type: bool
+
+            # Return flag if using cache for printers
+            use_cache:
+                return: bool

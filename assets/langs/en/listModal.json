@@ -1,0 +1,10 @@
+{
+    "deleteModal": {
+        "text": "Delete item?"
+    },
+    "errors": {
+        "create_exists": "Cannot be created (%s). Already exists.",
+        "update_exists": "Cannot be updated (%s to %s).\n(%s) Already exists.",
+        "empty": "Cannot be empty."
+    }
+}

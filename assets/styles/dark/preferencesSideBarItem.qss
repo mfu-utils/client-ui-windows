@@ -1,0 +1,17 @@
+#PreferencesSideBarItem {
+    background-color: transparent;
+    border-radius: 6px;
+    border: none;
+}
+
+#PreferencesSideBarItem[primary="true"] {
+    background-color: #3574f0;
+}
+
+#PreferencesSideBarItemLabel {
+    color: #DFE1E5;
+}
+
+#PreferencesSideBarItem[primary="true"] #PreferencesSideBarItemLabel {
+    font-weight: 600;
+}

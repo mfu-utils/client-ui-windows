@@ -1,0 +1,56 @@
+[
+    {
+        "display_name": "Brother MFC L3750CDW series",
+        "name": "Brother_MFC-L3750CDW_series",
+        "device": "dnssd://Brother%20MFC-L3750CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-b4220042d121",
+        "connected": true,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    },
+    {
+        "display_name": "HP Color LaserJet MFP M477fdw",
+        "name": "HP_Color_LaserJet_MFP_M477fdw",
+        "device": "socket://10.17.0.8",
+        "connected": true,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    },
+    {
+        "display_name": "HP DeskJet 4720 series",
+        "name": "HP_DeskJet_4720_series",
+        "device": "socket://192.168.178.33",
+        "connected": true,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    },
+    {
+        "display_name": "HP LaserJet 4200",
+        "name": "HP_LaserJet_4200",
+        "device": "socket://192.168.178.33",
+        "connected": true,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    },
+    {
+        "display_name": "Lexmark Lexmark T630 himalia",
+        "name": "Lexmark_Lexmark_T630_himalia",
+        "device": "///dev/null",
+        "connected": false,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    },
+    {
+        "display_name": "SHARP MX 5140N",
+        "name": "SHARP_MX-5140N",
+        "device": "dnssd://MX-5140N%20(4503825900)._printer._tcp.local/",
+        "connected": false,
+        "scope": 1,
+        "hidden": false,
+        "available": true
+    }
+]

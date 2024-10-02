@@ -1,0 +1,17 @@
+{
+    "dir_not_found": "Directory '%s' not found",
+    "cannot_create_file.title": "Creation file error",
+    "cannot_create_file.msg": "Cannot create file '%s'. %s",
+    "file_not_found_title": "File not found",
+    "file_not_found_msg": "Cannot find file '%s'. Does not exist",
+    "executed_not_found": "Executed file '%s' not found",
+    "parameters_not_found": "Parameters for %s not found",
+    "langs_not_found": "Langs for recognition not specified",
+    "convert_title": "Convert error",
+    "convert_msg": "Error convert '%s' to '%s' format. %s",
+    "load_image_title": "Cannot load image",
+    "load_image_msg": "Image '%' have wrong format",
+    "execute_engine": "Convertor exec with error code '%s'",
+    "printing_title": "Printing",
+    "printing_msg": "Error printing '%s'."
+}

@@ -1,0 +1,39 @@
+#ControlSpinBox {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #43454A;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#ControlSpinBox:disabled {
+    color: #43454A;
+}
+
+#ControlSpinBox::up-button {
+    border-radius: 3px;
+    image: url({{ upButton }});
+    width: 12;
+}
+
+#ControlSpinBox::down-button {
+    border-radius: 3px;
+    image: url({{ downButton }});
+    width: 12;
+}
+
+#ControlSpinBox::up-button:hover {
+    background-color: #43454A;
+}
+
+#ControlSpinBox::down-button:hover {
+    background-color: #43454A;
+}
+
+#ControlSpinBox[danger="true"] {
+     border-color: #ED5157;
+}
+
+#ControlSpinBox[primary="true"] {
+     border-color: #3574F0;
+}

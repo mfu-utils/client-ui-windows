@@ -1,0 +1,44 @@
+#PrintingListModal {
+	background-color: #2B2D30;
+}
+
+#PrintingListScrollArea,
+#PrintingListScrollWidget,
+#PrintingListLoadingDevicesWidget,
+#PrintingListErrorsWidget,
+#PrintingListErrorMessage {
+	background-color: transparent;
+	border: none;
+}
+
+#PrintingListLoadingDevicesLabel, #PrintingListErrorMessage {
+	background-color: transparent;
+	color: #7A7A7A;
+	font-size: 14px;
+	border: none;
+}
+
+#PrintingListScrollArea, #PrintingListModalStub {
+	border-bottom: 1px solid #1E1F22;
+}
+
+#PrintingListCancelButton, #PrintingListReloadDevicesButton, #PrintingListSendButton {
+	background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #43454A;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+#PrintingListSendButton {
+	background-color: #3574F0;
+    border-color: #3574F0;
+}
+
+#PrintingListCancelButton:disabled, #PrintingListSendButton:disabled, #PrintingListReloadDevicesButton:disabled {
+	background-color: transparent;
+	color: #7A7A7A;
+	border-color: #7A7A7A;
+}

@@ -1,0 +1,12 @@
+QWidget#DeviceParameterItem {
+}
+
+QLabel#DeviceParameterName {
+    color: #898989;
+    font-size: 11px;
+}
+
+QLabel#DeviceParameterValue {
+    color: white;
+    font-size: 15px;
+}

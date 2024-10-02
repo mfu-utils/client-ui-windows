@@ -1,0 +1,22 @@
+configs.services:
+  type: py
+  files:
+    - app
+    - cache
+    - logger
+    - rcl
+    - subprocesses
+    - db
+    - printing
+    - ocr_convertor
+    - scan
+    - client
+    - notifications
+    - langs
+    - ui
+
+configs.ui:
+  type: json
+  files:
+    - menu
+    - shortcuts

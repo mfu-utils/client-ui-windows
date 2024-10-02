@@ -1,0 +1,135 @@
+providers:
+  config_value: ['config', 'get']
+
+abstracts:
+  App.Core.Abstract.AbstractCacheDriver!:
+    provider: config_value
+    parameter: cache.default
+    match:
+      memory: App.Core.Cache.MemoryCacheDriver!
+      file: App.Core.Cache.FileCacheDriver!
+
+  App.Core.Abstract.AbstractLogChannel!:
+    provider: config_value
+    parameter: logger.default
+    match:
+      stdout: App.Core.Logger.StdoutLogChannel!
+      single: App.Core.Logger.SingleLogChannel!
+      daily: App.Core.Logger.DailyLogChannel!
+      stack: App.Core.Logger.StackLogChannel!
+
+  App.Core.Abstract.AbstractDbDriver!:
+    provider: config_value
+    parameter: db.driver
+    match:
+      sqlite: App.Core.DB.Drivers.SqliteDriver!
+
+
+services:
+  # This services must be registered before all
+  App.Core.Env!:
+    alias: env
+    singleton: true
+
+  App.Core.Config!:
+    alias: config
+    singleton: true
+
+  # Drivers for logging system
+  App.Core.Logger.StdoutLogChannel!:
+    alias: log.stdout
+
+  App.Core.Logger.SingleLogChannel!:
+    alias: log.single
+
+  App.Core.Logger.DailyLogChannel!:
+    alias: log.daily
+
+  # Drivers for cache system
+  App.Core.Cache.MemoryCacheDriver!:
+    alias: cache.memory
+
+  App.Core.Cache.FileCacheDriver!:
+    alias: cache.file
+
+  App.Core.Cache.RedisCacheDriver!:
+    alias: cache.redis
+
+  # Drivers for database
+  App.Core.DB.Drivers.SqliteDriver!:
+    alias: db.sqlite
+
+  # Commands for console
+  App.Core.Console.Output!:
+    alias: console.output
+    singleton: true
+
+  App.Core.Console.Kernel!:
+    alias: console
+    singleton: true
+
+  # Logging system service
+  App.Core.Logger.Log!:
+    alias: log
+    singleton: true
+
+  # Event system service
+  App.Core.Event!:
+    alias: events
+    singleton: true
+
+  # Cache system service
+  App.Core.Cache.CacheManager!:
+    singleton: true
+    alias: cache
+
+  # Database system service
+  App.Core.DB.Connection!:
+    singleton: true # Don't touch!!!
+    alias: db
+
+  # Target system
+  App.Core.Platform!:
+    singleton: true
+    alias: platform
+
+  App.Core.Machine!:
+    singleton: true
+    alias: machine
+
+  App.Core.MimeTypeConfig!:
+    alias: mime
+
+  App.Services.MimeConvertor!:
+    alias: mime.convertor
+
+  # Network
+
+  App.Core.Network.NetworkManager!:
+    alias: network.manager
+    singleton: true
+
+  App.Core.Network.Protocol.RCL!:
+    alias: rcl
+    singleton: true
+
+  # Client
+  App.Core.Ui.Lang!:
+    singleton: true
+    alias: ui.lang
+
+  App.Core.Ui.Icons!:
+    singleton: true
+    alias: ui.icons
+
+  App.Core.Ui.Ini!:
+    singleton: true
+    alias: ui.ini
+
+  App.Core.Ui.Styles!:
+    singleton: true
+    alias: ui.styles
+
+  App.Core.Ui.Screens!:
+    singleton: true
+    alias: ui.screens

@@ -1,0 +1,37 @@
+QWidget {
+    color: #AEB5BD;
+}
+
+QWidget#DevicePreview {
+    background-color: #2B2D30;
+    color: #AEB5BD;
+    border-radius: 8px;
+    border: 1px solid #43454A;
+}
+
+QWidget#DevicePreview:disabled {
+    background-color: transparent;
+}
+
+QWidget#DevicePreview:hover {
+    background-color: #3D4044;
+}
+
+#TitleLabel {
+    font-size: 14px;
+}
+
+#SubtitleLabel {
+    font-size: 10px;
+    color: #595959;
+}
+
+#DevicePreviewInfoButton {
+    border-radius: 8px;
+    border: 1px solid #43454A;
+    background-color: transparent;
+}
+
+#DevicePreviewInfoButton:hover {
+    background-color: #2B2D30;
+}

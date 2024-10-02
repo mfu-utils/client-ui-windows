@@ -1,0 +1,21 @@
+#Loading {
+    background-color: #2B2D30;
+    border-radius: 10px;
+    border: 1px solid #464749;
+}
+
+#LoadingText {
+    background-color: transparent;
+    color: #DFE1E5;
+}
+
+#LoadingContainer {
+    background-color: transparent;
+    border: none;
+}
+
+#LoadingTransformedWidget {
+    background-color: #287BDE;
+    border-radius: 3px;
+    border: none;
+}

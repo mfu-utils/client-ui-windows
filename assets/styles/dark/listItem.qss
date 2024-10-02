@@ -1,0 +1,50 @@
+#ListItem {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+#ListItem[primary="true"] {
+    border: 1px solid #37AAF6;
+}
+
+#ListItemEditor {
+    background-color: transparent;
+    border: none;
+}
+
+#ListItem:hover {
+    background-color: #4E5157;
+}
+
+#ListItemLabel {
+    background-color: transparent;
+    color: white;
+}
+
+#ListItemLabel:disabled {
+    color: #959697;
+}
+
+#ListItemDeleteButton, #ListItemOkRenameButton, #ListItemRenameButton, #ListItemCancelButton {
+    background-color: transparent;
+    border-radius: 7px;
+    border: none;
+}
+
+#ListItemDeleteButton:hover, #ListItemCancelButton:hover {
+    background-color: #ED5157;
+}
+
+#ListItemError {
+    font-size: 12px;
+    color: #ED5157;
+}
+
+#ListItemRenameButton:hover {
+    background-color: #0E76F8;
+}
+
+#ListItemOkRenameButton:hover {
+    background-color: #3C9353;
+}

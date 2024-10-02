@@ -1,0 +1,26 @@
+#ToolBar {
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #1E1F22;
+}
+
+QPushButton {
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #4E5157;
+}
+
+QPushButton QToolTip {
+    background-color: #2B2D30;
+    color: white;
+    border: 1px solid #464749;
+}
+
+QPushButton #Indicator {
+    border-radius: 4px;
+    background-color: #ED5157;
+}

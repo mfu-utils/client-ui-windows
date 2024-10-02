@@ -1,0 +1,19 @@
+QPushButton {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #43454A;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+QPushButton#SettingModalButtonOk {
+    background-color: #3574F0;
+    border-color: #3574F0;
+}
+
+QPushButton:disabled {
+    border-color: #43454A;
+    color: #43454A;
+}

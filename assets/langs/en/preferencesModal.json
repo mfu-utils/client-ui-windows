@@ -1,0 +1,91 @@
+{
+    "title": "Preferences",
+    "appearance": {
+        "title": "Appearance",
+        "lang": {
+            "title": "Language:"
+        },
+        "show_on_start": {
+            "title": "Show app on start",
+            "description": "Show main window after starting app"
+        }
+    },
+    "network": {
+        "title": "Network",
+        "address": {
+            "title": "Address:",
+            "pattern_error": "Please type valid ip address.",
+            "description": "Ip for connecting to server"
+        },
+        "port": {
+            "title": "Port:",
+            "description": "Tcp port"
+        },
+        "timeout": {
+            "title": "Timeout:",
+            "description": "Waiting before client create message with error"
+        }
+    },
+    "devices": {
+        "title": "Devices",
+        "device_choose": {
+            "title": "Automatic device selection",
+            "description": "Allow the server to select the device. It is not recommended\nto use this setting if more than one device is connected to the server"
+        }
+    },
+    "ocr": {
+        "title": "External OCR engine",
+        "enable": {
+            "title": "Enable",
+            "description": "Enable external ocr engine"
+        },
+        "path": {
+            "title": "Path:",
+            "description": "Path to ocr engine executable file",
+            "pattern_error": "Please type valid execution path"
+        },
+        "parameters": {
+            "title": "Parameters:",
+            "description": "Parameters for engine cli $p - path to scan, $o - out file, $l - langs",
+            "pattern_error": "Parameters cannot contains '%' symbol"
+        },
+        "langs_delimiter": {
+            "title": "Delimiter:",
+            "description": "Join languages key in command by delimiter, For space - %s"
+        }
+    },
+    "recognition": {
+        "title": "Recognition parameters",
+        "default_langs": {
+            "title": "Default languages:",
+            "description": "Default languages for list of recognition langs"
+        },
+        "save_dir": {
+            "title": "Save at:",
+            "description": "Directory for saving documents by format.\nExample: <saving directory>\\<format>\\document.docx",
+            "pattern_error": "Please type correct path"
+        }
+    },
+    "scans": {
+        "title": "Scans",
+        "dir": {
+            "title": "Save at:",
+            "description": "Scans saving directory",
+            "pattern_error": "Please type valid directory path"
+        }
+    },
+    "printing": {
+        "title": "Printing",
+        "view_tool": {
+            "title": "Use tool for MS Word view:",
+            "description": "Using for display 'docx' document in preview.",
+            "none_item": "None"
+        },
+        "send_converted_icons_by_default": {
+            "title": "Send converted icons by default"
+        },
+        "send_converted_docs_by_default": {
+            "title": "Send converted docs by default"
+        }
+    }
+}

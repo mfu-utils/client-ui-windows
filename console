@@ -1,0 +1,21 @@
+#!.venv/bin/python
+import os
+import sys
+
+from App import Application
+
+if not Application(Application.ApplicationType.Console):
+    sys.exit(1)
+
+from App.helpers import app, platform
+
+
+def main():
+    if platform().is_windows():
+        os.system('cls')
+
+    app().get('console').init()
+
+
+if __name__ == '__main__':
+    main()

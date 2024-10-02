@@ -1,0 +1,53 @@
+#ControlComboBox {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #43454A;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#ControlComboBox:focus {
+    border: 2px solid #43454A;
+}
+
+#ControlComboBox:disabled {
+    color: #43454A;
+}
+
+#ControlComboBox[danger="true"] {
+     border-color: #ED5157;
+}
+
+#ControlComboBox[primary="true"] {
+     border-color: #3574F0;
+}
+
+#ControlComboBox::down-arrow {
+    width: 16px;
+    height: 16px;
+    image: url({{ downArrow }});
+}
+
+#ControlComboBox QAbstractItemView {
+    background-color: #2B2D30;
+    combobox-popup: 0;
+    border: 1px solid #464749;
+    border-radius: 0px;
+    color: white;
+    padding: 5px 10px;
+    outline: none;
+}
+
+#ControlComboBox QAbstractItemView::item {
+    background-color: transparent;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#ControlComboBox QAbstractItemView::item:selected {
+    background-color: #284471;
+    border: none;
+    outline: none;
+}
