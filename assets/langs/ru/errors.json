@@ -1,0 +1,17 @@
+{
+    "dir_not_found": "Директория (%s) не найдена",
+    "cannot_create_file.title": "Ошибка создания файла",
+    "cannot_create_file.msg": "Не возможно создать файл '%s'. %s",
+    "file_not_found_title": "Файл не найден",
+    "file_not_found_msg": "Файл '%s' не найден",
+    "executed_not_found": "Исполняемый файл (%s) не найден",
+    "parameters_not_found": "Параметры для %s не найдены",
+    "langs_not_found": "Не указаны языки для распознавания",
+    "convert_title": "Ошибка конвертации",
+    "convert_msg": "Ошибка конвертации '%s' в '%s' формат. %s",
+    "load_image_title": "Ошибка загрузки изображения",
+    "load_image_msg": "Неизвестный формат изображения '%'",
+    "execute_engine": "Конвертация завершилась с ошибкой (%s)",
+    "printing_title": "Печать",
+    "printing_msg": "Ошибка отправки на печать. %s"
+}

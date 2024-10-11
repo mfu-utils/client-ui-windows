@@ -1,0 +1,4 @@
+#ScanListEmptyStub {
+    font-size: 16px;
+    color: #7A7A7A;
+}

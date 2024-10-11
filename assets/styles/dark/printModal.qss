@@ -1,0 +1,28 @@
+#PrintModal {
+	border-radius: 10px;
+    background-color: #2B2D30;
+    border: 1px solid #464749;
+}
+
+#PrintModalImage {
+	background-color: transparent;
+	border: none;
+}
+
+#PrintModalMessage {
+	background-color: transparent;
+	border: none;
+	color: #DFE1E5;
+}
+
+#PrintModalCloseButton {
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 14px;
+}
+
+#PrintModalCloseButton:hover {
+	background-color: #ED5157;
+}

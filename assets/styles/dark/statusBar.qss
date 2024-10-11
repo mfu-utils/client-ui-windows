@@ -1,0 +1,9 @@
+#StatusBar {
+    background-color: transparent;
+    border-top: 1px solid #1E1F22;
+}
+
+#StatusBarVersion {
+    font-size: 10px;
+    color: #BBBBBB;
+}

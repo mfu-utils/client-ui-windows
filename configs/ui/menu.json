@@ -1,0 +1,55 @@
+[
+    {
+        "name": "$menu.file.title",
+        "actions": [
+            {
+                "name": "$menu.file.new_scan",
+                "action": "open_scan_new"
+            },
+            {
+                "name": "$menu.file.scan_types",
+                "action": "open_scan_types_modal"
+            },
+            {
+                "name": "$menu.file.tags",
+                "action": "open_tags_modal"
+            },
+            {
+                "name": "$menu.file.scans_list",
+                "action": "open_scan_list_modal"
+            },
+            {"separator": true, "platforms": "~Darwin"},
+            {
+                "name": "$menu.file.settings",
+                "action": "open_settings",
+                "platforms": "~Darwin"
+            },
+            {
+                "name": "preferences",
+                "action": "open_settings",
+                "platforms": "Darwin"
+            },
+            {"separator": true, "platforms": "~Darwin"},
+            {
+                "name": "$menu.file.close",
+                "action": "close",
+                "platforms": "~Darwin"
+            }
+        ]
+    },
+    {
+        "name": "$menu.help.title",
+        "actions": [
+            {
+                "name": "$menu.help.about",
+                "action": "open_about_modal",
+                "platforms": "~Darwin"
+            },
+            {
+                "name": "about",
+                "action": "open_about_modal",
+                "platforms": "Darwin"
+            }
+        ]
+    }
+]

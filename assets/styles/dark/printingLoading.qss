@@ -1,0 +1,16 @@
+#LoadingContainer {
+    background-color: transparent;
+    border: none;
+}
+
+#LoadingTransformedWidget {
+    background-color: #7A7A7A;
+    border-radius: 2px;
+    border: none;
+}
+
+#PrintingFileItemLoadingText {
+	background-color: transparent;
+	border: none;
+	color: #7A7A7A;
+}

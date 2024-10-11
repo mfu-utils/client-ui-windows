@@ -1,0 +1,42 @@
+#PrintingFileParametersModal {}
+
+#PrintingFileParametersScrollArea, #PrintingFileParameterNoViewLabel {
+	background-color: transparent;
+	border: none;
+}
+
+#PrintingFileParameterNoViewLabel {
+	font-size: 15px;
+	color: #7A7A7A;
+}
+
+#PrintingFileParametersControls {
+	border-bottom: 1px solid #1E1F22;
+}
+
+#PrintingFileParametersPDFView {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #1E1F22;
+}
+
+#PrintingFileParameterNoViewWidget {
+	background-color: transparent;
+	border: none;
+	border-right: 1px solid #1E1F22;
+}
+
+#PrintingFileParametersCancelButton, #PrintingFileParametersSaveButton {
+	background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #43454A;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+#PrintingFileParametersSaveButton {
+	background-color: #3574F0;
+    border-color: #3574F0;
+}

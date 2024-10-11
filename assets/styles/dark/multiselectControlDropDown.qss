@@ -1,0 +1,32 @@
+#MultiselectControlDropDown {
+    border-radius: 10px;
+    background-color: #2B2D30;
+    border: 1px solid #464749;
+}
+
+#MultiselectChooseListItem {
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    outline-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#MultiselectChooseListItem:hover {
+    background-color: #0E76F8;
+}
+
+#MultiselectChooseListItem:focus {
+    background-color: #0E76F8;
+}
+
+#MultiselectScrollArea {
+    background-color: transparent;
+    border: none;
+}
+
+#MultiselectList {
+    background-color: transparent;
+    border: none;
+}

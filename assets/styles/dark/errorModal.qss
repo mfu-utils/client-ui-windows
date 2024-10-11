@@ -1,0 +1,20 @@
+#ErrorModal {
+    border-radius: 10px;
+    background-color: #2B2D30;
+    border: 1px solid #464749;
+}
+
+#ErrorModalTextBrowser {
+    background-color: transparent;
+    border: none;
+}
+
+#ErrorModalCloseButton {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #43454A;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}

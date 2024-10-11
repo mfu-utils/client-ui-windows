@@ -1,0 +1,15 @@
+{
+    "title": "Scans List",
+    "empty": "The scanned files will be displayed here",
+    "all_types": "All types",
+    "filters": {
+        "title": "Filter parameters",
+        "name": "Title:",
+        "format": "Format:",
+        "type": "Type:",
+        "tags": "Tags:",
+        "strict_tags": "Strict comparison tags",
+        "doc_types": "Converted documents"
+    },
+    "filter_button": "Filter"
+}

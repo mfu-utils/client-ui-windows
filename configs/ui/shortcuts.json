@@ -1,0 +1,9 @@
+{
+    "open_scan_new": "Ctrl+A",
+    "open_settings": "~Darwin:Ctrl+Alt+S|Darwin:Ctrl+,",
+    "open_scan_types_modal": "Ctrl+G",
+    "open_tags_modal": "Ctrl+T",
+    "open_scan_list_modal": "Ctrl+L",
+    "open_export": "Ctrl+E",
+    "close": "Ctrl+Q"
+}

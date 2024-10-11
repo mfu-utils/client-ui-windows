@@ -1,0 +1,11 @@
+{
+    "title": "Список печати",
+    "unsupported_type_file": "Неподдерживаемый тип файла.",
+    "prepare_file": "Подготовка...",
+    "send_button": "Отправить на печать",
+    "cancel_button": "Отмена",
+    "loading_devices_label": "Загрузка списка принтеров...",
+    "error_loading_devices": "Ошибка загрузки списка принтеров. %s",
+    "reload_devices_button": "Обновить список принтеров",
+    "cannot_load_printers_message": "Ошибка загрузки списка принтеров. Повторите попытку."
+}

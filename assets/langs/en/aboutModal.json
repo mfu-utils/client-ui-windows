@@ -1,0 +1,8 @@
+{
+    "title": "About",
+    "build": "Build",
+    "license": "License",
+    "repo": "Repo",
+    "python_version": "Python version",
+    "proto": "Protocol version"
+}

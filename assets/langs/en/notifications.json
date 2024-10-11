@@ -1,0 +1,9 @@
+{
+    "listWidget": {
+        "title": "Notifications",
+        "clearAll": "Clear all"
+    },
+    "notify": {
+        "title": "Notification"
+    }
+}

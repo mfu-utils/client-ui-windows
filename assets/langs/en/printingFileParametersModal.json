@@ -1,0 +1,60 @@
+{
+    "title": "Printing Parameters (%s)",
+    "cancel_button": "Cancel",
+    "save_button": "Save",
+    "no_view": "Preview not available.",
+    "paper_tray_items": {
+        "upper": "Upper paper tray",
+        "lower": "Lower paper tray",
+        "multipurpose": "Multi-purpose paper tray",
+        "large_capacity": "Large capacity paper tray"
+    },
+    "ordering_items": {
+        "normal": "Normal",
+        "reverse": "Reverse"
+    },
+    "pages_items": {
+        "all": "All",
+        "even": "Even",
+        "not_even": "Not even",
+        "custom": "Custom"
+    },
+    "controls": {
+        "device": {
+            "title": "Device:"
+        },
+        "copies": {
+            "title": "Copies:"
+
+        },
+        "paper_size": {
+            "title": "Paper size:"
+        },
+        "paper_tray": {
+            "default": "* Default",
+            "title": "Paper tray:"
+        },
+        "pages": {
+            "cups_format_error": "Wrong format.",
+            "description": "Example: 1-5,8,13-15"
+        },
+        "pages_policy": {
+            "title": "Pages:"
+        },
+        "order": {
+            "title": "Order:"
+        },
+        "mirror": {
+            "title": "Mirror"
+        },
+        "landscape": {
+            "title": "Landscape orientation"
+        },
+        "transparency": {
+            "title": "Transparency media type or source"
+        },
+        "send_converted": {
+            "title": "Send converted file"
+        }
+    }
+}

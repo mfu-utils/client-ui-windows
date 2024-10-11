@@ -1,0 +1,19 @@
+#DocumentModal {
+    background-color: #2B2D30;
+}
+
+#DocumentModalOkButton {
+    background-color: #3574F0;
+    border-radius: 5px;
+    border: 1px solid #3574F0;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+#DocumentModalOkButton:disabled {
+    background-color: transparent;
+    border-color: #43454A;
+    color: #43454A;
+}

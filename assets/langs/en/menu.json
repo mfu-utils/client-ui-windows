@@ -1,0 +1,16 @@
+{
+    "file": {
+        "title": "File",
+        "new_scan": "New scan",
+        "scan_types": "Scan types",
+        "tags": "Tags",
+        "scans_list": "Scans list",
+        "settings": "Settings",
+        "export": "Export",
+        "close": "Close"
+    },
+    "help": {
+        "title": "Help",
+        "about": "About"
+    }
+}

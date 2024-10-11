@@ -1,0 +1,30 @@
+#ScanListContainer {
+    background-color: transparent;
+    border-left: 1px solid #1E1F22;
+    border-top: 1px solid #1E1F22;
+}
+
+#ScanListScrollArea, #ScanList {
+    background-color: transparent;
+    border: none;
+}
+
+#ScanListContentContainer {
+    background-color: transparent;
+    border-left: 1px solid #595959;
+}
+
+#ScanListFilterButton {
+    background-color: transparent;
+    border: 1px solid #43454A;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+#ScanListFilterButton:hover {
+    background-color: #3574F0;
+    border-color: #3574F0;
+}

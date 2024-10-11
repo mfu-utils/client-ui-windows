@@ -1,0 +1,38 @@
+#ListContainer {
+    background-color: #2B2D30;
+}
+
+#ListScrollArea, #List {
+    background-color: transparent;
+    border: none;
+}
+
+#ListScrollArea {
+    border-top: 1px solid #1E1F22;
+}
+
+#ListCreateNameLineEdit {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #43454A;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#ListCreateNameLineEdit:disabled {
+    color: #43454A;
+}
+
+#ListCreateNameConfirmButton {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#ListCreateNameConfirmButton:hover {
+    background-color: #3574F0;
+}
+
+#ListErrorLabel {
+    font-size: 12px;
+    color: #ED5157;
+}

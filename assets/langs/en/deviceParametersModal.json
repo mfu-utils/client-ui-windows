@@ -1,0 +1,8 @@
+{
+    "title": "Device parameters",
+    "index": "ID",
+    "device": "Device",
+    "type": "Type",
+    "model": "Model",
+    "vendor": "Vendor"
+}

@@ -1,0 +1,59 @@
+{
+    "title": "Параметры печати (%s)",
+    "cancel_button": "Отмена",
+    "save_button": "Сохранить",
+    "no_view": "Предпросмотр недоступен.",
+    "paper_tray_items": {
+        "upper": "Верхний лоток для бумаги",
+        "lower": "Нижний лоток для бумаги",
+        "multipurpose": "Многоцелевой лоток для бумаги",
+        "large_capacity": "Лоток для бумаги большой емкости"
+    },
+    "ordering_items": {
+        "normal": "Прямой",
+        "reverse": "Обратный"
+    },
+    "pages_items": {
+        "all": "Все",
+        "even": "Четные",
+        "not_even": "Нечетные",
+        "custom": "Свой порядок"
+    },
+    "controls": {
+        "device": {
+            "title": "Устройство:"
+        },
+        "copies": {
+            "title": "Количество копий:"
+        },
+        "paper_size": {
+            "title": "Размер бумаги:"
+        },
+        "paper_tray": {
+            "default": "* По умолчанию",
+            "title": "Лоток для бумаги:"
+        },
+        "pages": {
+            "description": "Пример: 1-5,8,13-15",
+            "cups_format_error": "Неверный формат."
+        },
+        "pages_policy": {
+            "title": "Страницы:"
+        },
+        "order": {
+            "title": "Порядок печати:"
+        },
+        "mirror": {
+            "title": "Отразить зеркально"
+        },
+        "landscape": {
+            "title": "Отобразить горизонтально"
+        },
+        "transparency": {
+            "title": "Использовать прозрачный носитель"
+        },
+        "send_converted": {
+            "title": "Отправить сконвертированный файл"
+        }
+    }
+}

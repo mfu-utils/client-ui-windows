@@ -1,0 +1,28 @@
+{
+    "windowName": "Save as",
+    "title": "Parameters",
+    "buttons": {
+        "ok": "Ok"
+    },
+    "name": {
+        "title": "Name:",
+        "pattern_err": "Invalid name",
+        "empty_err": "Cannot be empty"
+    },
+    "scanType": {
+        "title": "Type:",
+        "nullable": "Without type"
+    },
+    "langs": {
+        "title": "Languages for document:"
+    },
+    "tags": {
+        "title": "Tags:"
+    },
+    "useOcr": {
+        "title": "Use OCR engine"
+    },
+    "convert": {
+        "title": "Convert to:"
+    }
+}

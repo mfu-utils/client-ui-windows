@@ -1,0 +1,126 @@
+#!.venv/bin/python
+
+import argparse
+import sys
+from typing import Optional
+
+from App import helpers, Application
+
+if not Application(Application.ApplicationType.Client):
+    sys.exit(1)
+
+from App.Core.Network.Client import ResponseDataPromise, ClientConfig
+from App.Core.Network.Protocol import CallRequest
+from App.Core.Network.Protocol.Responses import AbstractResponse
+from App.Core.Utils import DocumentMediaType, DocumentsRealSizes
+from App.Core.Utils.Ui import Casts
+from App.Services import PrinterService
+from App.helpers import config, console, cache, logger
+import json
+
+
+class Context:
+    promise: Optional[ResponseDataPromise] = None
+
+
+context = Context()
+
+
+def success_get_scan(response: AbstractResponse):
+    with open('tests/scan.tiff', 'wb') as f:
+        f.write(response.data())
+
+
+def success_get_devices(response: Optional[AbstractResponse]):
+    if not response:
+        console().error_message('No response')
+        return
+
+    console().success_message(json.dumps(response.data(), indent=2))
+
+
+def scan_action(args: argparse.Namespace):
+    _x, _y = DocumentsRealSizes.size(args.size)
+
+    parameters = {'x': _x, 'y': _y}
+
+    if args.format:
+        parameters = {'format': args.format}
+
+    if args.device:
+        parameters = {'device': args.device}
+
+    context.promise = (
+        helpers.request(
+            CallRequest('scan', parameters=parameters),
+            ClientConfig.client()
+        )
+        .then(lambda x: success_get_scan(x))
+        .catch(lambda x: console().error_message(x))
+    )
+
+
+def scanners_action(_: argparse.Namespace):
+    context.promise = (
+        helpers.request(CallRequest('scan', ['devices']), ClientConfig.client())
+        .then(lambda x: success_get_devices(x))
+        .catch(lambda x: console().error_message(x))
+    )
+
+
+def printers_action(_: argparse.Namespace):
+    context.promise = (
+        helpers.request(CallRequest('lpstat', ['devices']), ClientConfig.client())
+        .then(lambda x: PrinterService(cache(), logger(), config(), console()).printers_console_out(x))
+        .catch(lambda x: console().error_message(x))
+    )
+
+
+def ping_action(_: argparse.Namespace):
+    context.promise = (
+        helpers.request(CallRequest('ping'), ClientConfig.client())
+        .then(lambda x: console().success_message(x.data()))
+        .catch(lambda data: console().error_message(data))
+    )
+
+
+def main():
+    parser = argparse.ArgumentParser(description=config('app.name'))
+    subparsers = parser.add_subparsers(title='commands')
+
+    # Ping
+    ping_parser = subparsers.add_parser('ping', help="Ping the server")
+    ping_parser.set_defaults(func=ping_action)
+
+    # Scan document
+    scan_parser = subparsers.add_parser('scan', help='Scan document')
+    docs = list(Casts.enum2dict(DocumentMediaType).values())
+    scan_parser.add_argument('-s', '--size', type=str, choices=docs, default=DocumentMediaType.A4.name)
+    scan_parser.add_argument('-f', '--format', type=str, choices=['tiff', 'jpeg', 'png'], default='tiff')
+    scan_parser.add_argument('-d', '--device', type=str)
+    scan_parser.set_defaults(func=scan_action)
+
+    # Scanners list
+    scan_devices_parser = subparsers.add_parser('scanners-list', help='Scanners list')
+    scan_devices_parser.set_defaults(func=scanners_action)
+
+    # Print document
+    # print_parser = subparsers.add_parser('print', help="Print document")
+
+    # Printers list
+    print_devices_parser = subparsers.add_parser('printers-list', help='Printers list')
+    print_devices_parser.set_defaults(func=printers_action)
+
+    args = parser.parse_args()
+
+    if not vars(args):
+        parser.print_usage()
+    else:
+        args.func(args)
+
+        while context.promise.status() == ResponseDataPromise.STATUS_WAIT:
+            continue
+
+
+if __name__ == "__main__":
+    main()

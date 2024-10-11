@@ -1,0 +1,3 @@
+QWidget#AbstractModal {
+    background-color: #2B2D30;
+}

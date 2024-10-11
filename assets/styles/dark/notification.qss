@@ -1,0 +1,50 @@
+#Notification {
+    border-radius: 10px;
+}
+
+#Notification[success="true"] {
+    background-color: rgba(49, 66, 102, 0.2);
+}
+
+/*#Notification:hover[success="true"] {*/
+/*    background-color: rgba(49, 66, 102, 1);*/
+/*}*/
+
+#Notification[error="true"] {
+    background-color: rgba(214, 77, 91, 0.2);
+}
+
+/*#Notification:hover[error="true"] {*/
+/*    background-color: rgba(214, 77, 91, 1);*/
+/*}*/
+
+#Notification[warning="true"] {
+    background-color: rgba(194, 158, 74, 0.2);
+}
+
+/*#Notification:hover[warning="true"] {*/
+/*    background-color: rgba(194, 158, 74, 1);*/
+/*}*/
+
+#NotificationTitle {
+    background-color: transparent;
+    font-size: 11px;
+    color: #C0C2C5;
+}
+
+#NotificationCloseButton {
+    border: none;
+    border-radius: 8px;
+    padding-bottom: 3px;
+    color: #6F737A;
+}
+
+#NotificationCloseButton:hover {
+    color: white;
+}
+
+#NotificationText {
+    color: white;
+    background-color: transparent;
+    font-size: 12px;
+}

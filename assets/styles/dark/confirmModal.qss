@@ -1,0 +1,34 @@
+#ConfirmModal {
+    border-radius: 10px;
+    background-color: #2B2D30;
+    border: 1px solid #464749;
+}
+
+#ConfirmModalCancelButton, #ConfirmModalConfirmButton {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#ConfirmModalCancelButton:hover, #ConfirmModalConfirmButton:hover {
+    color: white;
+}
+
+#ConfirmModalCancelButton {
+    background-color: #3574F0;
+    border-color: #3574F0;
+}
+
+#ConfirmModalConfirmButton {
+    border-color: #ED5157;
+    color: #ED5157;
+}
+
+#ConfirmModalConfirmButton:hover {
+    background-color: #ED5157;
+}
+
+QPushButton:disabled {
+    border-color: #43454A;
+    color: #43454A;
+}

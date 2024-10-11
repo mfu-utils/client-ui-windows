@@ -1,0 +1,8 @@
+{
+    "convert_title": "Convert finished",
+    "convert_msg": "Finished convert '%s' to '%s' format",
+    "save_scan_title": "Scan finished",
+    "save_scan_msg": "Scan file saved at '%s'",
+    "printing_title": "Printing",
+    "printing_msg": "Sent file '%s' to print"
+}

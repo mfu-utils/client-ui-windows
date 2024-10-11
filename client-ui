@@ -1,0 +1,82 @@
+#!/.venv/bin/python
+import os
+import sys
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QPalette, QColor
+
+from App import Application
+
+if not Application(Application.ApplicationType.ClientUI):
+    sys.exit(1)
+
+from App.helpers import logger, ini
+from PySide6.QtWidgets import QApplication
+from App.Widgets import MainWindow
+
+# from thirdParty.jumplists.jumplists import JumpList, JumpListItemLink, JumpListCustomCategory
+
+from App.helpers import platform
+
+
+def windows_dark_mode_palette(_app: QApplication):
+    dark_palette = _app.palette()
+    dark_palette.setColor(QPalette.ColorRole.Window, QColor(53, 53, 53))
+    dark_palette.setColor(QPalette.ColorRole.WindowText, Qt.GlobalColor.white)
+    dark_palette.setColor(QPalette.ColorGroup.Disabled, QPalette.ColorRole.WindowText, QColor(127, 127, 127))
+    dark_palette.setColor(QPalette.ColorRole.Base, QColor(42, 42, 42))
+    dark_palette.setColor(QPalette.ColorRole.AlternateBase, QColor(66, 66, 66))
+    dark_palette.setColor(QPalette.ColorRole.ToolTipBase, QColor(53, 53, 53))
+    dark_palette.setColor(QPalette.ColorRole.ToolTipText, Qt.GlobalColor.white)
+    dark_palette.setColor(QPalette.ColorRole.Text, Qt.GlobalColor.white)
+    dark_palette.setColor(QPalette.ColorGroup.Disabled, QPalette.ColorRole.Text, QColor(127, 127, 127))
+    dark_palette.setColor(QPalette.ColorRole.Dark, QColor(35, 35, 35))
+    dark_palette.setColor(QPalette.ColorRole.Shadow, QColor(20, 20, 20))
+    dark_palette.setColor(QPalette.ColorRole.Button, QColor(53, 53, 53))
+    dark_palette.setColor(QPalette.ColorRole.ButtonText, Qt.GlobalColor.white)
+    dark_palette.setColor(QPalette.ColorGroup.Disabled, QPalette.ColorRole.ButtonText, QColor(127, 127, 127))
+    dark_palette.setColor(QPalette.ColorRole.BrightText, Qt.GlobalColor.red)
+    dark_palette.setColor(QPalette.ColorRole.Link, QColor(42, 130, 218))
+    dark_palette.setColor(QPalette.ColorRole.Highlight, QColor(42, 130, 218))
+    dark_palette.setColor(QPalette.ColorGroup.Disabled, QPalette.ColorRole.Highlight, QColor(80, 80, 80))
+    dark_palette.setColor(QPalette.ColorRole.HighlightedText, Qt.GlobalColor.white)
+    dark_palette.setColor(QPalette.ColorGroup.Disabled, QPalette.ColorRole.HighlightedText, QColor(127, 127, 127))
+
+    return dark_palette
+
+
+def main():
+    q_app = QApplication(sys.argv)
+
+    if platform().is_windows():
+        q_app.setPalette(windows_dark_mode_palette(q_app))
+        os.system('cls')
+
+    # jump_list = JumpList()
+    # custom_category = JumpListCustomCategory("Example")
+
+    w = MainWindow(q_app)
+
+    if ini('app.show_on_start', bool):
+        w.show()
+
+    # args = []
+
+    # if not getattr(sys, 'frozen', False):
+    #     args.append(__file__)
+
+    # link1 = JumpListItemLink("Test item", sys.executable, args + ["test\" test"])
+    # link1.working_directory = os.getcwd()
+    # custom_category.add_item(link1)
+    # custom_category.visible = True
+
+    # jump_list.add_category(custom_category)
+    # jump_list.update()
+
+    try:
+        q_app.exec()
+    except BaseException as e:
+        logger().error(str(e))
+
+
+if __name__ == "__main__":
+    main()

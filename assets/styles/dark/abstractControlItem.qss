@@ -1,0 +1,9 @@
+#AbstractControlItemError {
+    font-size: 12px;
+    color: #ED5157;
+}
+
+#AbstractControlItemDescription {
+    font-size: 13px;
+    color: #62666B;
+}
